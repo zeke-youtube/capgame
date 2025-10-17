@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Google reCAPTCHA Only</title>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <style>
+    body {
+      background: #111;
+      color: #eee;
+      font-family: sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1em;
+      background: #ffcc00;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔐 Shrine Access</h1>
+  <p>Complete the ritual to proceed.</p>
+
+  <div class="g-recaptcha" data-sitekey="6Ldysu0rAAAAADhW4ZwRPXKJhqKydnQKwiPXyqVB"></div>
+
+  <button onclick="verify()">Verify</button>
+  <div id="result"></div>
+
+  <script>
+    function verify() {
+      const response = grecaptcha.getResponse();
+      const result = document.getElementById("result");
+
+      if (!response) {
+        result.innerText = "❌ You must complete the CAPTCHA.";
+      } else {
+        result.innerText = "✅ Verified by the shrine. refersh to play again";
+      }
+    }
+  </script>
+</body>
+</html>
