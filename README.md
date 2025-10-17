@@ -7,9 +7,3 @@
 - 🔐 Google reCAPTCHA v2 integration
 - 🧩 Fully self-contained HTML + JS—no build step required
 
-## 🧱 Setup
-
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/yourusername/sigil-sort-captcha.git
-   cd sigil-sort-captcha
