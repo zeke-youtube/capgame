@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Google reCAPTCHA Only</title>
+  <title>reCAPTCHA v2</title>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <style>
     body {
@@ -24,9 +24,9 @@
 </head>
 <body>
   <h1>🔐 Shrine Access</h1>
-  <p>Complete the ritual to proceed.</p>
+  <p>Complete the CAPTCHA to proceed.</p>
 
-  <div class="g-recaptcha" data-sitekey="6Ldysu0rAAAAADhW4ZwRPXKJhqKydnQKwiPXyqVB"></div>
+  <div class="g-recaptcha" data-sitekey="6Leyje0rAAAAAM0DVOCWy64DPJ1CTfU77OIF_4Ev"></div>
 
   <button onclick="verify()">Verify</button>
   <div id="result"></div>
@@ -39,7 +39,8 @@
       if (!response) {
         result.innerText = "❌ You must complete the CAPTCHA.";
       } else {
-        result.innerText = "✅ Verified by the shrine. refersh to play again";
+        result.innerText = "✅ Verified by the shrine.";
+        // YAY
       }
     }
   </script>
